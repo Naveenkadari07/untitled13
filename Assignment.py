@@ -1,0 +1,51 @@
+##################              IMPORT LIBRARY     #####################
+#import math as m
+from RHombus import Rectangle
+from RHombus import Triangle
+from RHombus import Rhombus
+from RHombus import Circle
+
+def main():
+    print('##############    RECTANGLE OPERATIONS    ################')
+    length = float(input('Enter Length of Rectangle: '))
+    bredth = float(input('Enter Breadth of Rectangle : '))
+    Rect = Rectangle(length,bredth)
+    print('length rectangle = ',Rect.length)
+    print('bredth rectangle =', Rect.bredth)
+    rect_area = Rect.Area()
+    print('Area of the Rectangle is {:.2f}'.format(rect_area))
+    rect_perm = Rect.Perimater()
+    print('Perimeter of Rectangle is {:.2f}'.format(rect_perm))
+    print('##############    TRIANGLE OPERATIONS    ################')
+    a = float(input('Enter Side a : '))
+    b = float(input('Enter Side b : '))
+    c = float(input('Enter Side c : '))
+    tri = Triangle(a,b,c)
+    print('Side a is {:.2f}\n Side b is {:.2f}\n Side c is {:.2f}'.format(tri.a, tri.b, tri.c))
+    tr_area = tri.Area()
+    print('Area of the given Triangle is {:.2f}'.format(tr_area))
+    tr_per = tri.Perimeter()
+    print('Perimeter of the given Triangle is {:.2f}'.format(tr_per))
+    print('###############    RHOMBUS OPERATION      #################')
+    x = float(input('Enter side x :'))
+    y = float(input('Enter side y :'))
+    a_side = float(input('Enter side a_side :'))
+    rmhs = Rhombus(x,y,a_side)
+    print('side x is {:.2f}\n side y is {:.2f}\n side a_side is {:.2f}\n'.format(rmhs.x, rmhs.y, rmhs.a_side))
+    rbs_area = rmhs.Area()
+    print('Area of the given Rhombus is {:.2f}'.format(rbs_area))
+    rbs_per = rmhs.Perimeter()
+    print('Perimeter of the Rhombus is {:.2f}'.format(rbs_per))
+    print('#################    CIRCLE OPERATION     #################')
+    radius = float(input('Given radius :'))
+    crl = Circle(radius)
+    print('given radius is {:.2f}'.format(crl.radius))
+    crcl_area = crl.Area()
+    print('Area of the circle is {:.2f}'.format(crcl_area))
+    crcl_dia = crl.Diameter()
+    print('Diameter of the circle is {:.2f}'.format(crcl_dia))
+    crcl_cirm = crl.Circumference()
+    print('Circumference of the circle is {:.2f}'.format(crcl_cirm))
+#main()
+if __name__ == '__main__':
+    main()
